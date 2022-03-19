@@ -1,12 +1,24 @@
 import { Formik, Form, Field } from 'formik';
-import { Box, Button } from '@mui/material';
 import { Users, Mail, Lock } from 'react-feather';
+import { Box, Button } from '@mui/material';
+import api from '../../services/api';
 import Input from '../Input';
 import TitleForm from '../TitleForm';
 
 const FormRegistration = () => {
   const onSubmit = (values: any) => {
-    console.log(values);
+    api
+      .post('/users', {
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      })
+      .then(() => {
+        //redirect to login
+      })
+      .catch((response) => {
+        console.error(response.error);
+      });
   };
 
   return (

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rafael Almendra",
+      "email": "rafael@rafael.com",
+      "password": "123456"
+    },
+    {
+      "name": "rafael",
+      "email": "rafael@rafael.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "rafael2",
+      "email": "rafael@rafael.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "rafael3",
+      "email": "rafael@rafael.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "rafael5",
+      "email": "rafael@rafael.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "name": "rafael6",
+      "email": "rafael@rafael.com",
+      "password": "123",
+      "id": 6
+    }
+  ]
+}
