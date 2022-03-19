@@ -3,7 +3,8 @@ import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import theme from './styles/theme';
-import Login from './pages/Login';
+import Login from './pages/login';
+import Sucess from './pages/sucess';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Container>
           <Routes>
             <Route path="/" element={<Login />} />
+            <Route path="/sucess" element={<Sucess />} />
           </Routes>
         </Container>
       </ThemeProvider>

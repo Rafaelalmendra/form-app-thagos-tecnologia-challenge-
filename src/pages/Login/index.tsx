@@ -1,7 +1,6 @@
-import FormRegistration from '../../components/FormRegistration';
-import ImageLogin from '../../assets/images/vector-login.svg';
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/material';
+import ImageLogin from '../../components/ImageLogin';
+import FormRegistration from '../../components/FormRegistration';
 
 const Login = () => (
   <Grid
@@ -9,9 +8,10 @@ const Login = () => (
     display="flex"
     alignItems="center"
     justifyContent="center"
+    mb={5}
     columns={{ xs: 4, sm: 8, md: 12 }}
     sx={{
-      height: {
+      minHeight: {
         xs: '90vh',
         sm: '90vh',
         md: '100vh',
@@ -20,19 +20,7 @@ const Login = () => (
     }}
   >
     <Grid item xs={6}>
-      <Box
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        sx={{
-          width: '100%',
-          marginTop: {
-            xs: '2rem',
-          },
-        }}
-      >
-        <img style={{ width: '60%' }} src={ImageLogin} alt="Imagem de Login" />
-      </Box>
+      <ImageLogin />
     </Grid>
     <Grid item xs={6}>
       <FormRegistration />

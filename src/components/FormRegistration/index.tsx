@@ -1,11 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import { Users, Mail, Lock } from 'react-feather';
 import { Box, Button } from '@mui/material';
+import Alert from '@mui/material/Alert';
 import api from '../../services/api';
+import schema from '../../schema/validationRegister';
 import Input from '../Input';
 import TitleForm from '../TitleForm';
 
 const FormRegistration = () => {
+  const navigate = useNavigate();
   const onSubmit = (values: any) => {
     api
       .post('/users', {
@@ -14,7 +18,7 @@ const FormRegistration = () => {
         password: values.password,
       })
       .then(() => {
-        //redirect to login
+        navigate('/sucess');
       })
       .catch((response) => {
         console.error(response.error);
@@ -26,13 +30,15 @@ const FormRegistration = () => {
       <TitleForm />
       <Formik
         onSubmit={onSubmit}
+        validationSchema={schema}
         initialValues={{
           name: '',
           email: '',
           password: '',
           confirmPassword: '',
         }}
-        render={({ values, handleChange }) => (
+      >
+        {({ values, handleChange, errors }) => (
           <Form>
             <Field
               name="name"
@@ -42,14 +48,22 @@ const FormRegistration = () => {
               title="Seu nome"
               icon={<Users />}
             />
+            {errors.name && (
+              <Alert severity="error">
+                Nome deve conter no mínimo 2 caracteres
+              </Alert>
+            )}
             <Field
               name="email"
               onChange={handleChange}
               value={values.email}
               component={Input}
-              title="Seu email"
+              title="Seu e-mail"
               icon={<Mail />}
             />
+            {errors.email && (
+              <Alert severity="error">Digite um e-mail válido</Alert>
+            )}
             <Field
               name="password"
               onChange={handleChange}
@@ -59,6 +73,12 @@ const FormRegistration = () => {
               type="password"
               icon={<Lock />}
             />
+            {errors.password && (
+              <Alert severity="error">
+                A senha deve conter no mínimo 8 caracteres, uma letra maiúscula,
+                um número e um caractere especial
+              </Alert>
+            )}
             <Field
               name="confirmPassword"
               onChange={handleChange}
@@ -68,6 +88,9 @@ const FormRegistration = () => {
               type="password"
               icon={<Lock />}
             />
+            {errors.confirmPassword && (
+              <Alert severity="error">As senhas não coincidem</Alert>
+            )}
             <Button
               fullWidth
               variant="contained"
@@ -78,7 +101,7 @@ const FormRegistration = () => {
             </Button>
           </Form>
         )}
-      />
+      </Formik>
     </Box>
   );
 };
