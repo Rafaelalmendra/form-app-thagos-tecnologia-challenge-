@@ -12,12 +12,11 @@ const Login = () => (
     columns={{ xs: 4, sm: 8, md: 12 }}
     sx={{
       height: {
-        xs: '80vh',
-        sm: '80vh',
-        md: '80vh',
+        xs: '90vh',
+        sm: '90vh',
+        md: '100vh',
         lg: '100vh',
       },
-      margin: '2rem 0 2rem 0',
     }}
   >
     <Grid item xs={6}>
@@ -25,7 +24,12 @@ const Login = () => (
         display="flex"
         alignItems="center"
         justifyContent="center"
-        sx={{ width: '100%' }}
+        sx={{
+          width: '100%',
+          marginTop: {
+            xs: '2rem',
+          },
+        }}
       >
         <img style={{ width: '60%' }} src={ImageLogin} alt="Imagem de Login" />
       </Box>
