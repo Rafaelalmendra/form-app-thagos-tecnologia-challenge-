@@ -13,17 +13,25 @@ const theme = createTheme({
     fontFamily: 'Roboto',
 
     h1: {
-      fontSize: '2.485rem',
       fontWeight: '600',
     },
     subtitle1: {
-      fontSize: '1.875rem',
       fontWeight: '500',
+      color: '#19D773',
     },
     button: {
       fontSize: '1rem',
       width: '14rem',
       height: '3rem',
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 300, // phone
+      sm: 600, // tablets
+      md: 900, // small laptop
+      lg: 1200, // desktop
+      xl: 1536, // large screens
     },
   },
 });
