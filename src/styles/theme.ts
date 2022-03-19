@@ -6,7 +6,7 @@ const theme = createTheme({
       main: '#19D773',
       light: '#35FF95',
       dark: '#19CC6E',
-      contrastText: '#FFFFFF',
+      contrastText: '#FFF',
     },
   },
   typography: {
@@ -19,6 +19,11 @@ const theme = createTheme({
     subtitle1: {
       fontSize: '1.875rem',
       fontWeight: '500',
+    },
+    button: {
+      fontSize: '1rem',
+      width: '14rem',
+      height: '3rem',
     },
   },
 });

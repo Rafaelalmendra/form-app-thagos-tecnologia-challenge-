@@ -1,17 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
 import theme from './styles/theme';
-import Home from './pages/Home';
+import Login from './pages/Login';
 
 const App = () => {
   return (
     <BrowserRouter>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <Container>
+          <Routes>
+            <Route path="/" element={<Login />} />
+          </Routes>
+        </Container>
       </ThemeProvider>
     </BrowserRouter>
   );
