@@ -1,4 +1,4 @@
-import Form from '../../components/Form';
+import FormRegistration from '../../components/FormRegistration';
 import ImageLogin from '../../assets/images/vector-login.svg';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/material';
@@ -35,7 +35,7 @@ const Login = () => (
       </Box>
     </Grid>
     <Grid item xs={6}>
-      <Form />
+      <FormRegistration />
     </Grid>
   </Grid>
 );

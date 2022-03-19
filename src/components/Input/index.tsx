@@ -1,12 +1,14 @@
 import { TextField } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 
-interface FieldProps {
+interface InputProps {
   title: string;
   icon: React.ReactElement;
+  field: string;
+  type?: string;
 }
 
-const Field = ({ title, icon }: FieldProps) => (
+const Input = ({ title, icon, field, type, ...props }: InputProps) => (
   <TextField
     fullWidth
     id="outlined-basic"
@@ -16,7 +18,10 @@ const Field = ({ title, icon }: FieldProps) => (
     InputProps={{
       startAdornment: <InputAdornment position="start">{icon}</InputAdornment>,
     }}
+    type={type}
+    {...field}
+    {...props}
   />
 );
 
-export default Field;
+export default Input;
