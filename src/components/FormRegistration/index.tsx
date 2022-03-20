@@ -38,12 +38,10 @@ const FormRegistration = () => {
           confirmPassword: '',
         }}
       >
-        {({ values, handleChange, errors }) => (
+        {({ errors }) => (
           <Form>
             <Field
               name="name"
-              onChange={handleChange}
-              value={values.name}
               component={Input}
               title="Seu nome"
               icon={<Users />}
@@ -55,8 +53,6 @@ const FormRegistration = () => {
             )}
             <Field
               name="email"
-              onChange={handleChange}
-              value={values.email}
               component={Input}
               title="Seu e-mail"
               icon={<Mail />}
@@ -66,8 +62,6 @@ const FormRegistration = () => {
             )}
             <Field
               name="password"
-              onChange={handleChange}
-              value={values.password}
               component={Input}
               title="Sua senha"
               type="password"
@@ -76,13 +70,11 @@ const FormRegistration = () => {
             {errors.password && (
               <Alert severity="error">
                 A senha deve conter no mínimo 8 caracteres, uma letra maiúscula,
-                um número e um caractere especial
+                um número e uma caractere especial
               </Alert>
             )}
             <Field
               name="confirmPassword"
-              onChange={handleChange}
-              value={values.confirmPassword}
               component={Input}
               title="Confirme sua senha"
               type="password"
