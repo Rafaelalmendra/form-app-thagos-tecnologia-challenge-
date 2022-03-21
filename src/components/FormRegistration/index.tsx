@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
-import { Users, Mail, Lock } from 'react-feather';
+import { Users, Mail } from 'react-feather';
 import { Box, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import Alert from '@mui/material/Alert';
@@ -11,6 +11,7 @@ import schema from '../../schema/validationRegister';
 import CustomInput from '../CustomInput';
 import TitleForm from '../TitleForm';
 import SucessAlert from '../SucessAlert';
+import PasswordInput from '../CustomInput/PasswordInput';
 
 interface ValuesProps {
   name: string;
@@ -78,10 +79,8 @@ const FormRegistration = () => {
             )}
             <Field
               name="password"
-              component={CustomInput}
+              component={PasswordInput}
               title={t('Your password')}
-              type="password"
-              icon={<Lock />}
             />
             {errors.password && (
               <Alert severity="error">
@@ -92,10 +91,8 @@ const FormRegistration = () => {
             )}
             <Field
               name="confirmPassword"
-              component={CustomInput}
+              component={PasswordInput}
               title={t('Confirm your password')}
-              type="password"
-              icon={<Lock />}
             />
             {errors.confirmPassword && (
               <Alert severity="error">{t('Passwords do not match')}</Alert>
