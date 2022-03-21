@@ -1,16 +1,27 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import { Users, Mail, Lock } from 'react-feather';
 import { Box, Button } from '@mui/material';
 import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+import LoadingButton from '@mui/lab/LoadingButton';
+import SaveIcon from '@mui/icons-material/Save';
 import api from '../../services/api';
 import schema from '../../schema/validationRegister';
 import Input from '../Input';
 import TitleForm from '../TitleForm';
 
+interface ValuesProps {
+  name: string;
+  email: string;
+  password: string;
+}
+
 const FormRegistration = () => {
-  const navigate = useNavigate();
-  const onSubmit = (values: any) => {
+  const [loading, setLoading] = useState(false);
+  const [sucess, setSucess] = useState(true);
+  const onSubmit = (values: ValuesProps, { resetForm }: any) => {
+    setLoading(true);
     api
       .post('/users', {
         name: values.name,
@@ -18,10 +29,13 @@ const FormRegistration = () => {
         password: values.password,
       })
       .then(() => {
-        navigate('/sucess');
+        setLoading(false);
+        resetForm();
+        setSucess(true);
       })
       .catch((response) => {
         console.error(response.error);
+        setLoading(false);
       });
   };
 
@@ -83,17 +97,42 @@ const FormRegistration = () => {
             {errors.confirmPassword && (
               <Alert severity="error">As senhas não coincidem</Alert>
             )}
-            <Button
-              fullWidth
-              variant="contained"
-              sx={{ marginTop: '1.5rem' }}
-              type="submit"
-            >
-              Cadastrar
-            </Button>
+            {loading ? (
+              <LoadingButton
+                fullWidth
+                loading
+                loadingPosition="start"
+                startIcon={<SaveIcon />}
+                variant="contained"
+              >
+                Cadastrando
+              </LoadingButton>
+            ) : (
+              <Button
+                fullWidth
+                variant="contained"
+                sx={{ marginTop: '1.5rem' }}
+                type="submit"
+              >
+                Cadastrar
+              </Button>
+            )}
           </Form>
         )}
       </Formik>
+
+      {sucess && (
+        <Snackbar autoHideDuration={6000} open={sucess}>
+          <Alert
+            onClose={() => setSucess(false)}
+            severity="success"
+            variant="filled"
+            sx={{ width: '100%' }}
+          >
+            Cadastro efetuado com sucesso!
+          </Alert>
+        </Snackbar>
+      )}
     </Box>
   );
 };
