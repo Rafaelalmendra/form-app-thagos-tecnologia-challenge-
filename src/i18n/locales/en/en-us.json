@@ -12,6 +12,6 @@
     "Name must contain at least 2 characters": "Name must contain at least 2 characters",
     "Enter a valid email address": "Enter a valid email address",
     "The password must contain at least 8 characters, an uppercase letter, a number and a special character": "The password must contain at least 8 characters, an uppercase letter, a number and a special character",
-    "Passwords don't match": "Passwords don't match"
+    "Passwords do not match": "Passwords do not match"
   }
 }
