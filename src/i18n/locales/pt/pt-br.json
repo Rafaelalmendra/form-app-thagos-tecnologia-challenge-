@@ -12,6 +12,7 @@
     "Name must contain at least 2 characters": "Nome deve conter no mínimo 2 caracteres",
     "Enter a valid email address": "Digite um e-mail válido",
     "The password must contain at least 8 characters, an uppercase letter, a number and a special character": "A senha deve conter no mínimo 8 caracteres, uma letra maiúscula um número e uma caractere especial",
-    "Passwords do not match": "As senhas não coincidem"
+    "Passwords do not match": "As senhas não coincidem",
+    "Return": "Voltar"
   }
 }

@@ -4,13 +4,13 @@ import { Users, Mail, Lock } from 'react-feather';
 import { Box, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import Alert from '@mui/material/Alert';
-import Snackbar from '@mui/material/Snackbar';
 import LoadingButton from '@mui/lab/LoadingButton';
 import SaveIcon from '@mui/icons-material/Save';
 import api from '../../services/api';
 import schema from '../../schema/validationRegister';
 import Input from '../Input';
 import TitleForm from '../TitleForm';
+import SucessAlert from '../SucessAlert';
 
 interface ValuesProps {
   name: string;
@@ -123,18 +123,12 @@ const FormRegistration = () => {
           </Form>
         )}
       </Formik>
-
       {sucess && (
-        <Snackbar autoHideDuration={6000} open={sucess}>
-          <Alert
-            onClose={() => setSucess(false)}
-            severity="success"
-            variant="filled"
-            sx={{ width: '100%' }}
-          >
-            {t('Registration successful!')}
-          </Alert>
-        </Snackbar>
+        <SucessAlert
+          sucess={sucess}
+          setSucess={setSucess}
+          message={t('Registration successful!')}
+        />
       )}
     </Box>
   );

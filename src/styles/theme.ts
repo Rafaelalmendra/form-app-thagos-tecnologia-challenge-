@@ -11,7 +11,6 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Roboto',
-
     h1: {
       fontWeight: '600',
     },
