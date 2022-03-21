@@ -1,0 +1,17 @@
+{
+  "translation": {
+    "Welcome!": "Welcome!",
+    "Create your account": "Create your account",
+    "Your name": "Your name",
+    "Your e-mail": "Your e-mail",
+    "Your password": "Your password",
+    "Confirm your password": "Confirm your password",
+    "Register": "Register",
+    "Registering": "Registering",
+    "Registration successful!": "Registration successful!",
+    "Name must contain at least 2 characters": "Name must contain at least 2 characters",
+    "Enter a valid email address": "Enter a valid email address",
+    "The password must contain at least 8 characters, an uppercase letter, a number and a special character": "The password must contain at least 8 characters, an uppercase letter, a number and a special character",
+    "Passwords don't match": "Passwords don't match"
+  }
+}

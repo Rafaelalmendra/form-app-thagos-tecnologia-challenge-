@@ -5,6 +5,12 @@
       "name": "Rafael Almendra",
       "email": "rafael@rafael.com",
       "password": "TesteTeste123*"
+    },
+    {
+      "name": "Rafael",
+      "email": "rafael@rafael.com",
+      "password": "SlimSHady21*",
+      "id": 2
     }
   ]
 }
