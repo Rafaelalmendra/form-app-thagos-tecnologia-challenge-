@@ -8,7 +8,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import SaveIcon from '@mui/icons-material/Save';
 import api from '../../services/api';
 import schema from '../../schema/validationRegister';
-import Input from '../Input';
+import CustomInput from '../CustomInput';
 import TitleForm from '../TitleForm';
 import SucessAlert from '../SucessAlert';
 
@@ -58,7 +58,7 @@ const FormRegistration = () => {
           <Form>
             <Field
               name="name"
-              component={Input}
+              component={CustomInput}
               title={t('Your name')}
               icon={<Users />}
             />
@@ -69,7 +69,7 @@ const FormRegistration = () => {
             )}
             <Field
               name="email"
-              component={Input}
+              component={CustomInput}
               title={t('Your e-mail')}
               icon={<Mail />}
             />
@@ -78,7 +78,7 @@ const FormRegistration = () => {
             )}
             <Field
               name="password"
-              component={Input}
+              component={CustomInput}
               title={t('Your password')}
               type="password"
               icon={<Lock />}
@@ -92,7 +92,7 @@ const FormRegistration = () => {
             )}
             <Field
               name="confirmPassword"
-              component={Input}
+              component={CustomInput}
               title={t('Confirm your password')}
               type="password"
               icon={<Lock />}

@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
 import { ArrowLeft } from 'react-feather';
-import Image from '../../assets/images/vector-404.svg';
 import { useTranslation } from 'react-i18next';
+import Image from '../../assets/images/vector-404.svg';
 
 const NotFound = () => {
   const navigate = useNavigate();

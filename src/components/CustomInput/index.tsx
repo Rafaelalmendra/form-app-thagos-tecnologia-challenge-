@@ -8,7 +8,7 @@ interface InputProps {
   type?: string;
 }
 
-const Input = ({ title, icon, field, type, ...props }: InputProps) => (
+const CustomInput = ({ title, icon, field, type, ...props }: InputProps) => (
   <TextField
     fullWidth
     id="outlined-basic"
@@ -24,4 +24,4 @@ const Input = ({ title, icon, field, type, ...props }: InputProps) => (
   />
 );
 
-export default Input;
+export default CustomInput;

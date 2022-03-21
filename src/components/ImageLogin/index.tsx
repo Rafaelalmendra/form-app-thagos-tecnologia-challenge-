@@ -1,5 +1,5 @@
-import Image from '../../assets/images/vector-login.svg';
 import { Box } from '@mui/material';
+import Image from '../../assets/images/vector-login.svg';
 
 const ImageLogin = () => (
   <Box

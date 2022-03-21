@@ -9,6 +9,9 @@
     "email": "rafaelalmendra28@gmail.com",
     "url": "https://rafaelalmendra.com"
   },
+  "engines": {
+    "node": ">=14.17.6"
+  },
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
