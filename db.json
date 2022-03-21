@@ -11,6 +11,12 @@
       "email": "rafael@rafael.com",
       "password": "SlimSHady21*",
       "id": 2
+    },
+    {
+      "name": "Rafael",
+      "email": "rafael@rafael.com",
+      "password": "SlimShady21*",
+      "id": 3
     }
   ]
 }

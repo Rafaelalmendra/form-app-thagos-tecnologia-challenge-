@@ -1,7 +1,14 @@
 {
   "name": "form-application",
   "version": "0.1.0",
+  "description": "An interactive form with validations and steps",
   "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Rafael Almendra",
+    "email": "rafaelalmendra28@gmail.com",
+    "url": "https://rafaelalmendra.com"
+  },
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
