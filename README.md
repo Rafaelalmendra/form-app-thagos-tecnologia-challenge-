@@ -7,6 +7,8 @@
 ## ✍ Description
 An interactive form with validations and steps ✨
 
+<a href="https://www.figma.com/file/6Gxrgj09VQfFneSwD6yHmR/Form-App?node-id=1%3A8" target="_blank">Access the prototype in Figma</a>
+
 <br>
 
 ## 🧪 Technologies
