@@ -4,11 +4,12 @@
 
 <img src="github/mockup.png" />
 
-## Description
+## ✍ Description
 An interactive form with validations and steps ✨
+
 <br>
 
-### 🧪 Technologies
+## 🧪 Technologies
 
 | Technologies          | Version           |
 | --------------------- | ----------------- |
@@ -23,7 +24,6 @@ An interactive form with validations and steps ✨
 | React-feather         | `2.0.9 `          |
 | I18next               | `11.16.1 `        |
 | Husky                 | `7.0.4 `          |
-
 <br />
 
 ## 🚀 Installation
@@ -35,7 +35,6 @@ $ git clone https://github.com/Rafaelalmendra/form-challange
 $ cd form-challange
 $ code .
 ```
-
 
 To start it, follow the steps below:
 
