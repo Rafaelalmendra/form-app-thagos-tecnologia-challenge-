@@ -26,14 +26,6 @@ An interactive form with validations and steps ✨
 
 ## 🚀 Installation
 
-Clone the project on your machine.
-
-```bash
-$ git clone https://github.com/Rafaelalmendra/form-challange
-$ cd form-challange
-$ code .
-```
-
 To start it, follow the steps below:
 
 ```bash
