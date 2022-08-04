@@ -4,7 +4,8 @@
 <img src="github/mockup.png" />
 
 ## ✍ Description
-An interactive form with validations and steps ✨
+An interactive form with validations and steps.✨
+Challenge of the selection process of the company Taghos Tecnologia 
 
 <a href="https://www.figma.com/file/6Gxrgj09VQfFneSwD6yHmR/Form-App?node-id=1%3A8" target="_blank">Access the prototype in Figma</a>
 
